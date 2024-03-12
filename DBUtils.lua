@@ -31,8 +31,10 @@ local currentDataStamp = tonumber(date("%Y%m%d%H%M%S"));
 
 
 local function contains(table, element)
-	for i, value in pairs(table) do
-		if (value == element) then return true, i end
+	if table then
+		for i, value in pairs(table) do
+			if (value == element) then return true, i end
+		end
 	end
 	return false
 end
